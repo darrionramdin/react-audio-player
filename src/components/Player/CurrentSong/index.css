@@ -1,0 +1,5 @@
+.CurrentSong {
+    display: grid;
+    grid-auto-rows: 50px auto;
+    padding: 20px;
+}

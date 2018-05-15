@@ -1,0 +1,9 @@
+.AlbumArt {
+    width: 100%;
+    height: 116px;
+}
+
+.AlbumArt__image {
+    height: 100%;
+    width: 100%;
+}

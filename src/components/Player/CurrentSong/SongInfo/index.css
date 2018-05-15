@@ -1,0 +1,13 @@
+.SongInfo__artist {
+    font-weight: 600;
+    font-size: 0.6rem;
+    letter-spacing: 0.05rem;
+    color: #8b8f99;
+    text-transform: uppercase;
+}
+
+.SongInfo__title {
+    color: #252629;
+    font-size: 1rem;
+    font-weight: 400;
+}

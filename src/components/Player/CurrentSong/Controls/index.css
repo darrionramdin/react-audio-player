@@ -1,0 +1,29 @@
+.Controls__control {
+    width: 18px;
+    background: none;
+    border: none;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.Controls__control-image {
+    width: 100%;
+}
+
+.Controls__progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0px 8px;
+}
+
+.Controls__progress[value]::-webkit-progress-bar {
+    height: 6px;
+    border: 1px solid #d4d5de;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.Controls__progress[value]::-webkit-progress-value {
+    background-color: #ff6b6b;
+}
+
