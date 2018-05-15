@@ -13,13 +13,33 @@ class Player extends Component {
     }
     
     state = {
-        currentSong: 'http://choirzone.com/wp-content/uploads/2017/07/Oceans-Where-Feet-may-fail-Hillsong-UNITED.mp3',
+        currentSong: '',
         showPlayButton: true,
-        songProgress: ''
+        songProgress: '',
+        song: {
+            title: '',
+            artist: '',
+            url: '',
+            cover: ''
+        }
     }
 
-    componentDidMount() {
-        
+    
+    componentWillReceiveProps(nextProps) {     
+        let newSong = Object.assign({}, this.state.song, {
+            title: nextProps.song.title,
+            artist: nextProps.song.artist,
+            url: nextProps.song.url,
+            cover: nextProps.song.cover
+        });
+        this.setState({
+            song: newSong,
+        })
+
+        this.audio.current.oncanplaythrough = () => {
+            this.playSong();
+            this.setState({showPlayButton: false});
+        }
     }
 
     pauseSong = () => {
@@ -29,12 +49,16 @@ class Player extends Component {
 
     songProgress = (currentTime, duration) => {
         let newValue = currentTime/duration;
-        this.setState({songProgress: newValue});
+        this.setState({songProgress: String(newValue)});
     }
 
     playSong = () => {
-        let showPlayButton = this.state.showPlayButton;
-        this.setState({showPlayButton: !showPlayButton})
+        if(this.audio.current.duration > 0) {
+            let showPlayButton = this.state.showPlayButton;
+            this.setState({showPlayButton: !showPlayButton})
+        } 
+        // let showPlayButton = this.state.showPlayButton;
+        // this.setState({showPlayButton: !showPlayButton})
         this.audio.current.play();
         this.audio.current.ontimeupdate = () => this.songProgress(this.audio.current.currentTime, this.audio.current.duration);
     }
@@ -42,15 +66,17 @@ class Player extends Component {
     render() { 
         return ( 
             <div className="Player">
-                <AlbumArt src="https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/df/d2/9b/dfd29b0e-528c-6111-ba52-6e1aac686650/05099963269352.jpg/1200x630bb.jpg" />
-                <CurrentSong 
+                <AlbumArt src={this.state.song.cover} />
+                <CurrentSong
+                    songTitle={this.state.song.title}
+                    songArtist={this.state.song.artist} 
                     onPlaySong={this.playSong}
                     onPauseSong={this.pauseSong} 
                     showPlayButton={this.state.showPlayButton}
                     onSongProgress={this.state.songProgress}
                 />
                 <AddSong />
-                <audio ref={this.audio} src={this.state.currentSong}></audio>
+                <audio ref={this.audio} src={this.state.song.url}></audio>
             </div>
          )
     }

@@ -1,3 +1,8 @@
+.Controls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 .Controls__control {
     width: 18px;
     background: none;
@@ -7,6 +12,10 @@
 }
 
 .Controls__control-image {
+    width: 100%;
+}
+
+.Controls__progress {
     width: 100%;
 }
 

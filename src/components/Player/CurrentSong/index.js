@@ -6,7 +6,7 @@ import Controls from './Controls/index';
 const CurrentSong = (props) => {
     return (
         <div className="CurrentSong">
-            <SongInfo artist="Hillsong United" title="Where feet may fall" />
+            <SongInfo artist={props.songArtist} title={props.songTitle} />
             <Controls 
             handlePlayClick={props.onPlaySong} 
             handlePauseClick={props.onPauseSong}
