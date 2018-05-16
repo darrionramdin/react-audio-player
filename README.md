@@ -1,7 +1,9 @@
-##Introduction
+## Introduction
 This personal project is a simple web application built using React and the HTML Audio Element.
 
-##Installation
+![alt text](./download.png "ScreenShot")
+
+## Installation
 1. npm install
 2. npm start
 
