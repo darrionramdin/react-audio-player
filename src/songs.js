@@ -27,6 +27,27 @@ const songlist =[
         url: "https://gospelsongsmp3.com/wp-content/uploads/2018/03/GOSPELSONGSMP3.COM_Who_You_Say_I_Am_-_Hillsong_Worship.mp3",
         cover: "http://guidetracks.co/wp-content/uploads/thereismore-hillsong.jpg"
     },
+    {
+        id: "5",
+        title: "Levels",
+        artist: "Avicii",
+        url: "http://trendland.com/wp-content/uploads/2011/12/Levels.mp3",
+        cover: "https://is5-ssl.mzstatic.com/image/thumb/Music/e6/09/04/mzi.ybhssean.jpg/1200x630bb.jpg"
+    },
+    {
+        id: "6",
+        title: "Trap Queen",
+        artist: "Fetty Wap",
+        url: "http://dl2.shirazsong.net/dl/music/94-10/g/3.%20Fetty%20Wap%20-%20Trap%20Queen.mp3",
+        cover: "https://vignette.wikia.nocookie.net/myat40/images/3/3f/Fetty_Wap_Trap_Queen_cover.jpg"
+    },
+    {
+        id: "6",
+        title: "Pour It Up (RL Grime Trap Remix)",
+        artist: "Rihanna",
+        url: "http://tegos.ru/new/mp3_full/Rihanna_-_Pour_it_up.mp3",
+        cover: "https://e-cdns-images.dzcdn.net/images/cover/11017c445e3627abb4b0cfc557be23e1/500x500.jpg"
+    },
 ]
 
 export default songlist;

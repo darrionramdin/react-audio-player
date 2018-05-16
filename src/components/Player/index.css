@@ -3,7 +3,7 @@
     width: 530px;
     height: 116px;
     display: grid;
-    grid-template-columns: 115px 300px auto;
+    grid-template-columns: 115px auto;
     background: #fff;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }

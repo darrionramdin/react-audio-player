@@ -3,7 +3,6 @@ import './index.css';
 
 import AlbumArt from './AlbumArt/index';
 import CurrentSong from './CurrentSong/index';
-import AddSong from './AddSong/index';
 
 class Player extends Component {
     //http://choirzone.com/wp-content/uploads/2017/07/Oceans-Where-Feet-may-fail-Hillsong-UNITED.mp3
@@ -75,7 +74,6 @@ class Player extends Component {
                     showPlayButton={this.state.showPlayButton}
                     onSongProgress={this.state.songProgress}
                 />
-                <AddSong />
                 <audio ref={this.audio} src={this.state.song.url}></audio>
             </div>
          )
