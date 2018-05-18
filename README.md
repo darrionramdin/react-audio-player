@@ -15,5 +15,3 @@ The songs are are loaded using the audio element via external urls that end with
 The songs are located in the song.js file in the src directory and are mapped over in the application to produce the various single song component which holds all the information for the song.
 
 During this, I was able to work with various component lifecycles and learn more about refs in React.
-
-Other ideas I had during this project was to add the ability to search through the tracks, add your own songs, navigation controls and autoplay. I decided to keep this minimal and will implement this is another music app project, most likely a larger one.
